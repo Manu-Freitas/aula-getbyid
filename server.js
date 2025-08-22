@@ -33,7 +33,7 @@ app.get ("/bruxos/nome/:nome", (req, res) => {
     let nome = req.params.nome;
     nome = nome.toLowerCase();
 
-    const nomeFiltrados = bruxos.filter(b => b.nome.includes(nome));
+    const nomeFiltrados = bruxos.filter(b => b.nome.toLowerCase().includes(nome));
    
 if(nomesFiltrados) {
     res.status(200).json(nomeFiltrados);
